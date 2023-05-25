@@ -21,7 +21,6 @@ class fam extends StatefulWidget {
 }
 
 class _famState extends State<fam> {
-
   bool? Nationalid = false;
   bool? driverLisence = false;
   bool? birthCirt = false;
@@ -36,11 +35,9 @@ class _famState extends State<fam> {
       home: Scaffold(
         drawer: new Drawer(),
         appBar: new AppBar(
-          backgroundColor:   Color(0xFF00CDD0),
+          backgroundColor: Color(0xFF00CDD0),
           leading: IconButton(
-            onPressed: () {
-
-            },
+            onPressed: () {},
             icon: Icon(
               Icons.notifications,
               color: Colors.white,
@@ -53,11 +50,10 @@ class _famState extends State<fam> {
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
-                child:Image(
-                  image: ResizeImage(
-                      AssetImage('Assets/images/blackLogo.png'),
-                      width: 1000,
-                      height: 800),),
+                child: Image(
+                  image: ResizeImage(AssetImage('Assets/images/blackLogo.png'),
+                      width: 1000, height: 800),
+                ),
                 // child: Text('Monkez',style: TextStyle(fontSize: MyDim.fontSizebetween, fontWeight: FontWeight.w700),),
                 decoration: BoxDecoration(
                   // image: 'Assets/images/logoblack.png',
@@ -65,87 +61,128 @@ class _famState extends State<fam> {
                 ),
               ),
               ListTile(
-                title: Text('Family Community', style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Family Community',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => userprofile()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => userprofile()));
                 },
               ),
               ListTile(
-                title: Text('Service Needs' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Service Needs',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ServiceNeeds()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ServiceNeeds()));
                 },
               ),
               ListTile(
-                title: Text('Travel Guide' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Travel Guide',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => TravelGuide()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TravelGuide()));
                 },
               ),
               ListTile(
-                title: Text('Contact Us' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Contact Us',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ContactUS()));
-                }, ),
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ContactUS()));
+                },
+              ),
               ListTile(
-                title: Text('Nearest Building' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Nearest Building',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => NearestBuilding()));
-                }, ),
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NearestBuilding()));
+                },
+              ),
               ListTile(
-                title: Text('Guidance' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Guidance',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Guidance()));
-                }, ),
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Guidance()));
+                },
+              ),
               ListTile(
-                title: Text('Edit Profile' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Edit Profile',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => SetupProfile3()));
-                }, ),
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SetupProfile3()));
+                },
+              ),
               ListTile(
-                title: Text('Logout' , style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+                title: Text(
+                  'Logout',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
-                }, ),
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => WelcomePage()));
+                },
+              ),
             ],
           ),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 45.0,),
+              SizedBox(
+                height: 45.0,
+              ),
               // new Container(
               //   margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
               //   alignment: Alignment.topLeft,
@@ -201,16 +238,16 @@ class _famState extends State<fam> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ) //<-- SEE HERE
-                          ),
+                              ),
                           onPressed: () {
                             AwesomeDialog(
-                                context: context,
-                                dialogType: DialogType.success,
-                                animType: AnimType.topSlide,
-                                showCloseIcon: true,
-                                title: "Success",
-                                desc: 'Friend Request sent successfully',
-                                btnOkOnPress: () {})
+                                    context: context,
+                                    dialogType: DialogType.success,
+                                    animType: AnimType.topSlide,
+                                    showCloseIcon: true,
+                                    title: "Success",
+                                    desc: 'Friend Request sent successfully',
+                                    btnOkOnPress: () {})
                                 .show();
                           },
                           icon: Icon(
@@ -293,7 +330,7 @@ class _famState extends State<fam> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ) //<-- SEE HERE
-                        ),
+                            ),
                         onPressed: () {},
                         icon: Icon(
                           // <-- Icon
@@ -316,14 +353,14 @@ class _famState extends State<fam> {
                 child: OutlinedButton.icon(
                   style: OutlinedButton.styleFrom(
                       shadowColor:
-                      Color.fromARGB(255, 0, 205, 208).withOpacity(0.5),
+                          Color.fromARGB(255, 0, 205, 208).withOpacity(0.5),
                       padding: EdgeInsets.all(10),
                       side: BorderSide(
                           color: Color.fromARGB(255, 0, 205, 208), width: 2),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ) //<-- SEE HERE
-                  ),
+                      ),
                   onPressed: () {},
                   icon: Icon(
                     // <-- Icon
@@ -338,7 +375,7 @@ class _famState extends State<fam> {
                           color: Colors.black)), // <-- Text
                 ),
               ),
-              new Container(
+              Container(
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
                 child: TextButton(
                   style: TextButton.styleFrom(
@@ -353,113 +390,119 @@ class _famState extends State<fam> {
                   onPressed: () {
                     AwesomeDialog(
                       context: context,
-                      body: Column(children: [
-                        CheckboxListTile(
-                          value: Nationalid,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              Nationalid = value;
-                            });
-                          },
-                          title: Text(
-                            "National ID",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                        CheckboxListTile(
-                          value: driverLisence,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              driverLisence = value;
-                            });
-                          },
-                          title: Text(
-                            "Driver's lisence",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                        CheckboxListTile(
-                          value: birthCirt,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              birthCirt = value;
-                            });
-                          },
-                          title: Text(
-                            "Birth Certificate",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                        CheckboxListTile(
-                          value: HSCirt,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              HSCirt = value;
-                            });
-                          },
-                          title: Text(
-                            "High School Graduation Certificate",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                        CheckboxListTile(
-                          value: passport,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              passport = value;
-                            });
-                          },
-                          title: Text(
-                            "Passport",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                        CheckboxListTile(
-                          value: visa,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              visa = value;
-                            });
-                          },
-                          title: Text(
-                            "Acquired Visas",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                        CheckboxListTile(
-                          value: vaccine,
-                          controlAffinity: ListTileControlAffinity
-                              .leading, //checkbox at left
-                          onChanged: (bool? value) {
-                            setState(() {
-                              vaccine = value;
-                            });
-                          },
-                          title: Text(
-                            "Vaccines",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                        ),
-                      ]),
+                      body: StatefulBuilder(
+                        builder: (BuildContext context, StateSetter setState) {
+                          return Column(children: [
+                            CheckboxListTile(
+                              value: Nationalid,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                // print('Before update: Nationalid = ${Nationalid}');
+                                setState(() {
+                                  Nationalid = value;
+                                });
+                                // print('After update: Nationalid = ${Nationalid}');
+                              },
+                              title: Text(
+                                "National ID",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                            CheckboxListTile(
+                              value: driverLisence,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  driverLisence = value;
+                                });
+                              },
+                              title: Text(
+                                "Driver's lisence",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                            CheckboxListTile(
+                              value: birthCirt,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  birthCirt = value;
+                                });
+                              },
+                              title: Text(
+                                "Birth Certificate",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                            CheckboxListTile(
+                              value: HSCirt,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  HSCirt = value;
+                                });
+                              },
+                              title: Text(
+                                "High School Graduation Certificate",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                            CheckboxListTile(
+                              value: passport,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  passport = value;
+                                });
+                              },
+                              title: Text(
+                                "Passport",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                            CheckboxListTile(
+                              value: visa,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  visa = value;
+                                });
+                              },
+                              title: Text(
+                                "Acquired Visas",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                            CheckboxListTile(
+                              value: vaccine,
+                              controlAffinity: ListTileControlAffinity
+                                  .leading, //checkbox at left
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  vaccine = value;
+                                });
+                              },
+                              title: Text(
+                                "Vaccines",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                            ),
+                          ]);
+                        },
+                      ),
                       animType: AnimType.topSlide,
                       showCloseIcon: true,
                       title: "Select documents ",

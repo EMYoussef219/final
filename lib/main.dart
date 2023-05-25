@@ -22,11 +22,10 @@ import 'package:monkez/guidance.dart';
 import 'package:monkez/home.dart';
 import 'package:monkez/travelScan.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -34,13 +33,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         fontFamily: 'IBMPlexSerif-LightItalic',
       ),
-      home: SplashScreen (),
+      home: SplashScreen(),
     );
   }
 }
-
