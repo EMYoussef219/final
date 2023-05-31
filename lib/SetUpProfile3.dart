@@ -9,7 +9,9 @@ import 'package:monkez/home.dart';
 import '../Constants/Dimensions.dart';
 
 class SetupProfile3 extends StatefulWidget {
-  const SetupProfile3({Key? key}) : super(key: key);
+  final String uid;
+
+  const SetupProfile3({Key? key, required this.uid}) : super(key: key);
 
   @override
   State<SetupProfile3> createState() => _SetupProfile3State();
@@ -62,25 +64,25 @@ class _SetupProfile3State extends State<SetupProfile3> {
     return Scaffold(
       // appBar: AppBar(
       //   backgroundColor: Color(0xFF00CDD0),
-        // centerTitle: true,
-        // title: const Text(
-        //   'Edit Profile',
-        //   style: TextStyle(
-        //       color: Colors.white,
-        //       fontSize: MyDim.fontSizebetween,
-        //       fontWeight: FontWeight.bold),
-        // ),
-        // leading: IconButton(
-        //     onPressed: () {
-        //       setState(() {
-        //         Navigator.push(context,MaterialPageRoute(builder:(context)=>userprofile()));
-        //       });
-        //     },
-        //     icon: const Icon(
-        //       Icons.arrow_back,
-        //       color: Colors.white,
-        //       size: MyDim.fontSizeButtons,
-        //     )),
+      // centerTitle: true,
+      // title: const Text(
+      //   'Edit Profile',
+      //   style: TextStyle(
+      //       color: Colors.white,
+      //       fontSize: MyDim.fontSizebetween,
+      //       fontWeight: FontWeight.bold),
+      // ),
+      // leading: IconButton(
+      //     onPressed: () {
+      //       setState(() {
+      //         Navigator.push(context,MaterialPageRoute(builder:(context)=>userprofile()));
+      //       });
+      //     },
+      //     icon: const Icon(
+      //       Icons.arrow_back,
+      //       color: Colors.white,
+      //       size: MyDim.fontSizeButtons,
+      //     )),
       // ),
       body: SingleChildScrollView(
         child: Column(
@@ -472,7 +474,7 @@ class _SetupProfile3State extends State<SetupProfile3> {
                     children: <Widget>[
                       Container(
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(30),
                             color: Color(0xFF00CDD0),),
                           width: 150,
                           height: 65,
@@ -516,5 +518,4 @@ class _SetupProfile3State extends State<SetupProfile3> {
     );
   }
 }
-
 

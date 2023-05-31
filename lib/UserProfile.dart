@@ -110,17 +110,38 @@ class _userprofileState extends State<userprofile> {
                 ),),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => SetupProfile3()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => SetupProfile3(uid: '',)));
                 }, ),
               ListTile(
                 title: Text('Logout' , style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                 ),),
-                onTap: () {
-                  Navigator.pop(context); // Close the drawer
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
-                }, ),
+                  onTap: () {showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return WillPopScope(
+                        onWillPop: () async => false,
+                        child: AlertDialog(
+                          title: Text('Logout'),
+                          content: Text('Are you sure you want to log out?'),
+                          actions: [
+                            TextButton(
+                              child: Text('No'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            TextButton(
+                              child: Text('Yes'),
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
+                              },
+                            ),
+                          ],
+                        ),
+                      );
+                    },); })
             ],
           ),
         ),
@@ -305,9 +326,32 @@ class _userprofileState extends State<userprofile> {
                     ),
                   ),
                   onPressed: () {
-                    setState(() {
-                      Navigator.push(context,MaterialPageRoute(builder:(context)=>WelcomePage()));
-                    });
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return WillPopScope(
+                          onWillPop: () async => false,
+                          child: AlertDialog(
+                            title: Text('Logout'),
+                            content: Text('Are you sure you want to log out?'),
+                            actions: [
+                              TextButton(
+                                child: Text('No'),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              TextButton(
+                                child: Text('Yes'),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+                      },);
+
                   },
                   child: Text('Logout',
                       style: TextStyle(
@@ -362,3 +406,4 @@ class _userprofileState extends State<userprofile> {
     );
   }
 }
+

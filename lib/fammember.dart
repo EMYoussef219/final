@@ -157,7 +157,7 @@ class _famState extends State<fam> {
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SetupProfile3()));
+                      MaterialPageRoute(builder: (context) => SetupProfile3(uid: '',)));
                 },
               ),
               ListTile(

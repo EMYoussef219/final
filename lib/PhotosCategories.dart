@@ -10,6 +10,7 @@ import 'package:monkez/UserProfile.dart';
 import 'package:monkez/WelcomePage.dart';
 import 'package:monkez/guidance.dart';
 import 'package:monkez/travelScan.dart';
+import 'package:monkez/uploadDocument.dart';
 
 class Photos extends StatefulWidget {
   const Photos({Key? key}) : super(key: key);
@@ -126,17 +127,39 @@ class _PhotosState extends State<Photos> {
               ),),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SetupProfile3()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SetupProfile3(uid: '',)));
               }, ),
             ListTile(
               title: Text('Logout' , style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
               ),),
-              onTap: () {
-                Navigator.pop(context); // Close the drawer
-                Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
-              }, ),
+              onTap: () {showDialog(
+    context: context,
+    builder: (BuildContext context) {
+    return WillPopScope(
+    onWillPop: () async => false,
+    child: AlertDialog(
+    title: Text('Logout'),
+    content: Text('Are you sure you want to log out?'),
+    actions: [
+    TextButton(
+    child: Text('No'),
+    onPressed: () {
+    Navigator.of(context).pop();
+    },
+    ),
+    TextButton(
+    child: Text('Yes'),
+    onPressed: () {
+    Navigator.of(context).pop();
+    Navigator.of(context).pop();
+    },
+    ),
+    ],
+    ),
+    );
+              },); })
           ],
         ),
       ),
@@ -174,7 +197,7 @@ class _PhotosState extends State<Photos> {
                             ),
                             IconButton(
                               onPressed: () {
-                                onClick();
+                                Navigator.push(context,MaterialPageRoute(builder:(context)=>DocumentUploadScreen2()));
                               },
                               icon: Icon(
                                 Icons.add_circle_outline,
@@ -264,7 +287,7 @@ class _PhotosState extends State<Photos> {
                         ),
                         IconButton(
                           onPressed: () {
-                            onClick();
+                            Navigator.push(context,MaterialPageRoute(builder:(context)=>DocumentUploadScreen2()));
                           },
                           icon: Icon(
                             Icons.add_circle_outline,
