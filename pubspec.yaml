@@ -29,8 +29,12 @@ environment:
 dependencies:
   flutter_cupertino_date_picker: ^1.0.26+2
 
+
+
   flutter:
    sdk: flutter
+
+
   intl: ^0.17.0
   image: ^3.2.2
   dropdown_button2: ^2.0.0
