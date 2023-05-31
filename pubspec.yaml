@@ -46,8 +46,12 @@ dependencies:
   flutter_local_notifications: ^14.0.0+1
   image_picker: ^0.8.7+4
 
+
+
   flutter:
    sdk: flutter
+
+
   intl: ^0.17.0
   image: ^3.2.2
   dropdown_button2: ^2.0.0

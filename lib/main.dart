@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monkez/CategoriesSetUp2.dart';
+import 'package:monkez/Componets/admin.dart';
 import 'package:monkez/EditProfileLogin.dart';
 import 'package:monkez/Education.dart';
 import 'package:monkez/Login.dart';
@@ -20,6 +21,7 @@ import 'package:monkez/ContactUS.dart';
 import 'package:monkez/fammember.dart';
 import 'package:monkez/guidance.dart';
 import 'package:monkez/home.dart';
+import 'package:monkez/models/test.dart';
 import 'package:monkez/travelScan.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -57,7 +59,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'IBMPlexSerif-LightItalic',
       ),
-      home: SplashScreen(),
+      home: admin(),
     );
   }
 }

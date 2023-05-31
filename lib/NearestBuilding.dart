@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
  import '../Constants/new_constrants.dart';
 
+
 class NearestBuilding extends StatefulWidget {
   const NearestBuilding({Key? key}) : super(key: key);
 
@@ -323,16 +324,9 @@ class _NearestBuildingState extends State<NearestBuilding> {
               ),
             ),
 
-
-
-
-
-
-
-
-
           ],
         ),
+
       ),
 
 
