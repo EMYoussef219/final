@@ -21,9 +21,29 @@ import 'package:monkez/fammember.dart';
 import 'package:monkez/guidance.dart';
 import 'package:monkez/home.dart';
 import 'package:monkez/travelScan.dart';
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
+  tz.initializeTimeZones();
+
+  // Get the local time zone
+  late final tz.Location _local;
+  try {
+    _local = tz.local;
+  } catch (error) {
+    print('Error getting local time zone: $error');
+    return;
+  }
+
+  // Use the local time zone
+  final now = tz.TZDateTime.now(_local);
+  print('The current time is: $now');
 }
 
 class MyApp extends StatelessWidget {
